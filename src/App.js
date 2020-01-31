@@ -22,7 +22,7 @@ const foodILike = [
   }
 ]
 
-function Food({ name, picture }) {
+function Food({ name, picture , rating }) {
   return (
     <div>
       <h2>I like {name}</h2>
