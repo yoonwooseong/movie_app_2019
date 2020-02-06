@@ -8,7 +8,13 @@ class App extends React.Component{
     movies: []
   };
   getMovies = async () => {
-    const {data: { data : {movies}}} = await axios.get("https://yts-proxy.now.sh/list_movies.json?sort_by_rating")
+    const {
+      data: { 
+        data : {movies}
+    }
+  } = await axios.get(
+      "https://yts-proxy.now.sh/list_movies.json?sort_by_rating"
+      );
     this.setState({ movies, isLoading: false});
   };
   componentDidMount() {
@@ -25,12 +31,13 @@ class App extends React.Component{
         ) : (
           <div class="movies">
             {movies.map(movie => (
-            <Movie
-              key ={movie.id} 
-              id={movie.id} 
-              year={movie.year} 
-              title={movie.title} 
-              summary={movie.summary}
+              <Movie
+                key ={movie.id} 
+                id={movie.id} 
+                year={movie.year} 
+                title={movie.title} 
+                summary={movie.summary}
+                poster={movie.medium_cover_image}
             />
           ))}
         </div>
