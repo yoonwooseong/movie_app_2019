@@ -15,10 +15,12 @@ class Detail extends React.Component {
             console.log(location)
             return (
                 <div>
-                    <span>{location.state.title}</span>
-                    <span>{location.state.year}</span>
-                    <span>{location.state.rating}</span>
-                    <span>{location.state.title}</span>
+                    <img src={location.state.poster} />
+                    <br></br>
+                    <h1>{location.state.title}</h1>
+                    <h2>{location.state.year}</h2>
+                    <p>{location.state.summary}</p>
+                    <span>{location.state.genres}</span>
                 </div>
             
             );
