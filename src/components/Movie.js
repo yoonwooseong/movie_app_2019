@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './Movie.css';
 
 
-function Movie({id, year, title, summary, poster, genres}) {
+function Movie({id, year, title, summary, poster, genres, rating}) {
   return (
     <Link 
       to={{
@@ -14,7 +14,8 @@ function Movie({id, year, title, summary, poster, genres}) {
           title,
           summary,
           poster,
-          genres
+          genres,
+          rating
         }
       }}
     >
@@ -41,7 +42,8 @@ Movie.protoTypes = {
   title: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
-  genres: PropTypes.arrayOf(PropTypes.string).isRequired
+  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+  rating: PropTypes.number.isRequired
 };
 
 export default Movie;
