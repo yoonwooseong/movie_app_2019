@@ -1,9 +1,15 @@
 import React from 'react';
+import "./About.css";
 
 function About(props) {
     console.log(props);
     return (
-        <span>About this page: I built it because I love movies.</span>
+        <div className = "about_container">
+            <span>
+                About this page: It is an app that can know information about the movie!
+            </span>
+            <h5>* I will study more and make a better App</h5>
+        </div>
     );
 }
 
