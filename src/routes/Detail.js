@@ -14,7 +14,7 @@ class Detail extends React.Component {
         if (location.state) {
             console.log(location)
             return (
-                <div>
+                <div className = "movieDetails">
                     <img src={location.state.poster} />
                     <br></br>
                     <h1>{location.state.title}</h1>
