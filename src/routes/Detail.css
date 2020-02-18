@@ -19,3 +19,9 @@
   margin-left: 20px;
   font-weight: 500;
 }
+
+.movieDetails__summary{
+  font-size: small;
+  font-style: oblique;
+  color: #2c2c2c;
+}
