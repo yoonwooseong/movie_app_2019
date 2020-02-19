@@ -14,9 +14,14 @@
   width: 100%;
   left: 150px;
 }
-.movieDetails .movieDetails__title{
+.movieDetails__title,
+.movieDetails__year,
+.movieDetails__summary{
   margin-top: -20px;
-  margin-left: 20px;
+  margin-left: 10px;
+  padding: 10px;
+}
+.movieDetails__title{
   font-weight: 500;
 }
 
@@ -24,4 +29,9 @@
   font-size: small;
   font-style: oblique;
   color: #2c2c2c;
+}
+.movieDetails__year{
+  font-size: medium;
+  font-style: normal;
+  color: black;
 }
