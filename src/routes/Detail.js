@@ -21,7 +21,10 @@ class Detail extends React.Component {
                     <p className="movieDetails__summary">{location.state.summary}</p>
                     <span>{location.state.genres}</span>
                 </div>
-            
+                /*
+                genres 부분 map해서 위치 수정
+                추가적인 영화 내용
+                */
             );
         } else {
             return null;

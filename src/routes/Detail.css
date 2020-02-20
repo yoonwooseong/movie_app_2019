@@ -1,5 +1,6 @@
 .movieDetails {
     background-color: #fab1a0;
+    width: 700px;
     margin-top: 70px;
     margin-bottom: 70px;
     padding: 20px;
@@ -35,3 +36,7 @@
   font-style: normal;
   color: black;
 }
+/*
+genres 부분 map해서 위치 수정
+추가적인 영화 내용
+*/
