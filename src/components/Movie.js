@@ -1,12 +1,12 @@
-import React from 'react';
-import {Link} from "react-router-dom";
-import PropTypes from 'prop-types';
-import './Movie.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import "./Movie.css";
 
-
-function Movie({id, year, title, summary, poster, genres, rating}) {
+function Movie({ id, year, title, summary, poster, genres, rating }) {
   return (
-    <Link 
+    <Link
+      className="info"
       to={{
         pathname: `/movie/${id}`,
         state: {
@@ -15,8 +15,8 @@ function Movie({id, year, title, summary, poster, genres, rating}) {
           summary,
           poster,
           genres,
-          rating
-        }
+          rating,
+        },
       }}
     >
       <div className="movie">
@@ -26,10 +26,12 @@ function Movie({id, year, title, summary, poster, genres, rating}) {
           <h5 className="movie__year">{year}</h5>
           <ul className="genres">
             {genres.map((genre, index) => (
-              <li key={index} className="genres__genre">{genre}</li>
+              <li key={index} className="genres__genre">
+                {genre}
+              </li>
             ))}
           </ul>
-          <p className="movie__summary">{summary.slice(0,150)}...</p>
+          <p className="movie__summary">{summary.slice(0, 150)}...</p>
         </div>
       </div>
     </Link>
@@ -43,7 +45,7 @@ Movie.protoTypes = {
   summary: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
   genres: PropTypes.arrayOf(PropTypes.string).isRequired,
-  rating: PropTypes.number.isRequired
+  rating: PropTypes.number.isRequired,
 };
 
 export default Movie;
